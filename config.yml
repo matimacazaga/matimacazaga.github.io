@@ -36,6 +36,9 @@ languages:
                 - name: Tags
                   url: tags/
                   weight: 10
+                - name: About
+                  url: about/
+                  weight: 10
                 # - name: WiKi
                 #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
                 # - name: Discord
@@ -68,28 +71,29 @@ params:
     images: ["papermod-cover.png"]
     hideSummary: true
 
-    profileMode:
-        enabled: false
-        title: PaperMod
-        imageUrl: "#"
-        imageTitle: my image
-        # imageWidth: 120
-        # imageHeight: 120
-        buttons:
-            - name: Archives
-              url: archives
-            - name: Tags
-              url: tags
+    # profileMode:
+    #     enabled: false
+    #     title: PaperMod
+    #     imageUrl: "#"
+    #     imageTitle: my image
+    #     # imageWidth: 120
+    #     # imageHeight: 120
+    #     buttons:
+    #         - name: Archives
+    #           url: archives
+    #         - name: Tags
+    #           url: tags
 
-    homeInfoParams:
-        Title: "Matias' Personal Blog"
-        Content: >
-            Welcome to my personal blog! My name is Matias Macazaga 
-            and I'm from Argentina. I'm a Quantitative Developer / Data Scientist 
-            with experience in Machine Learning models validation, development and 
-            deployment, Portfolio Management and Optimization and Risk Management.
+    # homeInfoParams:
+    #     Title: "A quant's journey"
+    #     Content: >
+    #         Welcome to my personal blog! My name is Matias Macazaga 
+    #         and I'm from Argentina. I'm a Quantitative Developer / Data Scientist 
+    #         with experience in Machine Learning models validation, development and 
+    #         deployment, Portfolio Management and Optimization, and Risk Management.
             
-            Feel free to contact me at mdmacazaga@gmail.com or by [LinkedIn](linkedin.com/in/matias-macazaga).
+    #         Feel free to contact me at mdmacazaga@gmail.com or by [LinkedIn](linkedin.com/in/matias-macazaga).
+    
     socialIcons:
         - name: github
           url: "https://github.com/matimacazaga"
