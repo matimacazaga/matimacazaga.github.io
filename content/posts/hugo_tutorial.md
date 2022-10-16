@@ -1,5 +1,5 @@
 ---
-title: "How to create your own blog using Github Pages"
+title: "Start a blog using Hugo and Github Pages"
 date: 2022-10-10
 # weight: 1
 # aliases: ["/first"]
@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Step-by-step tutorial for creating a personal blog using Hugo and Github Pages."
-canonicalURL: "https://canonical.url/to/page"
+# canonicalURL: "https://canonical.url/to/page"
 # disableHLJS: true # to disable highlightjs
 disableShare: false
 searchHidden: false
@@ -50,7 +50,7 @@ The last feature I would like to highlight is that Hugo has supports for themes.
 
 ## What is GitHub Pages?
 
-{{<figure src="/img/github-logo.png" alt="HUGO" position="center" style="border-radius: 8px; background: white" caption="GitHub - [source](https://1000logos.net/github-logo/)">}}
+{{<figure src="/img/github-logo.png" alt="HUGO" position="center" style="border-radius: 8px" caption="GitHub - [source](https://1000logos.net/github-logo/)">}}
 
 GitHub pages are public web pages for users and organizations that are freely hosted on Github's `github.io` domain or on a custom domain name. GitHub Pages allows to create an entire website directly from a repository on GitHub.com.
 
@@ -180,7 +180,7 @@ editPost:
 Then, create a new folder called `posts` under the `content` folder. You can now automatically create posts using the following hugo command:
 
 ```bash
-hugo new --kind post /content/posts/<name>
+hugo new --kind post content/posts/<name>
 ```
 
 This creates a new file in the `content/posts` folder that can be used as base for your blog post. Put some text in there and hit save to see the changes on the site.
