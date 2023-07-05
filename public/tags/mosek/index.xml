@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://matimacazaga.github.io/tags/mosek/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://matimacazaga.github.io/tags/mosek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Portfolio Optimization with Python - Part II</title>
+      <link>https://matimacazaga.github.io/posts/portfolio_optimization_max_sharpe/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://matimacazaga.github.io/posts/portfolio_optimization_max_sharpe/</guid>
+      <description>Max Sharpe portfolio optimization using MOSEK&amp;#39;s Fusion API.</description>
+    </item>
+    
     <item>
       <title>Portfolio Optimization with Python - Part I</title>
       <link>https://matimacazaga.github.io/posts/portfolio_optimization/</link>

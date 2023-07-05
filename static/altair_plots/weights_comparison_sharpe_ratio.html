@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-4e388dc7b7c6cdda9e7dd473a0964bfd"}, "mark": "bar", "encoding": {"color": {"field": "Optimization Type", "legend": {"orient": "bottom", "title": null}, "scale": {"range": ["#e60049", "#0bb4ff"]}, "type": "nominal"}, "column": {"field": "Asset", "spacing": 5, "type": "nominal"}, "x": {"axis": null, "field": "Optimization Type", "type": "nominal"}, "y": {"axis": {"format": ".2%", "title": "Weight"}, "field": "Weight", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-4e388dc7b7c6cdda9e7dd473a0964bfd": [{"Asset": "NVDA", "Optimization Type": "Constrained", "Weight": 0.19999981459596586}, {"Asset": "NVDA", "Optimization Type": "Unconstrained", "Weight": 0.12095627488813022}, {"Asset": "AMD", "Optimization Type": "Constrained", "Weight": 0.011081320343869163}, {"Asset": "AMD", "Optimization Type": "Unconstrained", "Weight": 2.445731879331299e-08}, {"Asset": "INTC", "Optimization Type": "Constrained", "Weight": 0.08891890343021691}, {"Asset": "INTC", "Optimization Type": "Unconstrained", "Weight": 1.7609675621834725e-08}, {"Asset": "BAC", "Optimization Type": "Constrained", "Weight": 3.7845620618586896e-08}, {"Asset": "BAC", "Optimization Type": "Unconstrained", "Weight": 1.2436972784158762e-08}, {"Asset": "JPM", "Optimization Type": "Constrained", "Weight": 0.14999994533921643}, {"Asset": "JPM", "Optimization Type": "Unconstrained", "Weight": 0.016585142336816502}, {"Asset": "C", "Optimization Type": "Constrained", "Weight": 1.6380695580714557e-08}, {"Asset": "C", "Optimization Type": "Unconstrained", "Weight": 5.897095994466637e-09}, {"Asset": "MSFT", "Optimization Type": "Constrained", "Weight": 0.199999989023963}, {"Asset": "MSFT", "Optimization Type": "Unconstrained", "Weight": 0.2949602011107243}, {"Asset": "GOOG", "Optimization Type": "Constrained", "Weight": 0.19999998719177034}, {"Asset": "GOOG", "Optimization Type": "Unconstrained", "Weight": 0.22538835406486296}, {"Asset": "META", "Optimization Type": "Constrained", "Weight": 0.049999988483779435}, {"Asset": "META", "Optimization Type": "Unconstrained", "Weight": 0.07187168731219909}, {"Asset": "BTC-USD", "Optimization Type": "Constrained", "Weight": 0.0890730186499432}, {"Asset": "BTC-USD", "Optimization Type": "Unconstrained", "Weight": 0.2702377110155189}, {"Asset": "ETH-USD", "Optimization Type": "Constrained", "Weight": 0.010926978714959044}, {"Asset": "ETH-USD", "Optimization Type": "Unconstrained", "Weight": 5.688706848679274e-07}]}};
+      var embedOpt = {"mode": "vega-lite", "theme": "dark", "actions": false};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

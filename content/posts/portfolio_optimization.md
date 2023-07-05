@@ -3,7 +3,7 @@ title: "Portfolio Optimization with Python - Part I"
 date: 2022-10-10
 # weight: 1
 # aliases: ["/first"]
-tags: ["MOSEK", "Python", "Portfolio Optimization", "Efficient Frontier", "Backtesting", "Backtrader"]
+tags: ["MOSEK", "Python", "Portfolio Optimization", "Efficient Frontier", "Backtesting"]
 author: "Matias Macazaga"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -112,21 +112,21 @@ For a single position \\(i\\), we have
 
 where \\(l_{i}\\) is the lower bound and \\(u_{i}\\) the upper one.
 
-On the other hand, for a sector or group of assets \\(\mathcal{I}\\), we have
+On the other hand, for a sector or group of assets \\(\mathbb{I}\\), we have
 
-\\[ l_{i} \leq \sum_{i\in\mathcal{I}}x_{i}\leq u_{i} \\]
+\\[ l_{i} \leq \sum_{i\in\mathbb{I}}x_{i}\leq u_{i} \\]
 
 Note that the constraints of the type *greater than* (similar for constraints of the type *less than*) that apply to all the assets can be expressed in matrix form as
 
-\\[ \mathbf{I}^{N\times N} \mathbf{x} \leq \mathbf{1}_{N} u \\]
+\\[ \mathbb{I}^{N\times N} \mathbf{x} \leq \mathbf{1}_{N} u \\]
 
-where \\(\mathbf{I}^{N\times N}\\) is the identity matrix with \\(N\\) columns and rows, \\(\mathbf{1}_{N}\\) is an \\(N\\)-dimensional vector of ones and \\(u\\) is the upper bound. 
+where \\(\mathbb{I}^{N\times N}\\) is the identity matrix with \\(N\\) columns and rows, \\(\mathbf{1}_{N}\\) is an \\(N\\)-dimensional vector of ones and \\(u\\) is the upper bound. 
 
 Additionally, *greater than* constraints (similar for *less than* constraints) for assets in a specific sector can be expressed as
 
-\\[  \mathbf{1}_{i\in\mathcal{I}}^{T}\mathbf{x} \leq u \\]
+\\[  \mathbf{1}_{i\in\mathbb{I}}^{T}\mathbf{x} \leq u \\]
 
-where \\(\mathbf{1}_{i\in\mathcal{I}}^{T}\\) is an \\(N\\)-dimensional vector whose values are \\(1\\) if the asset \\(i\\) belongs to the sector \\(\mathcal{I}\\) or \\(0\\) if not.
+where \\(\mathbf{1}_{i\in\mathbb{I}}^{T}\\) is an \\(N\\)-dimensional vector whose values are \\(1\\) if the asset \\(i\\) belongs to the sector \\(\mathbb{I}\\) or \\(0\\) if not.
 
 Finally, *greater than* (or similarly *less than*) constraints for a specific asset can be expressed as
 
